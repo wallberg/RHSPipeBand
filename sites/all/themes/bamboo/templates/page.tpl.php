@@ -97,25 +97,29 @@
 </div>
 </header>
 
+<?php if ($primary_nav): ?>
 <div id="menu-wrapper" class="container">
   <nav id="main-menu" role="navigation" class="sixteen columns alpha omega">
     <div class="menu-navigation-container">
       <!-- Theme native drop downs and mobile menu-->
-      <?php if ($primary_nav): ?>
       <div id="nav-wrap">
         <div id="menu-icon">Menu</div>
         <?php print render($primary_nav); ?>
       </div>
-      <?php endif; ?>
-
-      <!-- for third party menu system modules like superfish-->
-      <?php if ($page['main_menu']): ?>
-        <?php print render($page['main_menu']); ?>
-      <?php endif; ?>
     </div>
   </nav>
 </div>
 <!-- end main-menu -->
+<?php endif; ?>
+
+<?php if ($page['main_menu']): ?>
+  <!-- for third party menu system modules like superfish-->
+  <div id="third-party-menu" class="container">
+    <div class="sixteen columns"
+    <?php print render($page['main_menu']); ?>
+  </div>
+  </div>
+<?php endif; ?>
 
 <div class="container" id="content-wrapper">
 
@@ -217,6 +221,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
     </section>
     <!-- /#main -->
   </div>

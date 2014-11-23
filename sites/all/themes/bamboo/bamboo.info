@@ -48,10 +48,12 @@ settings[body_font_style]  = sans_serif
 settings[theme_color_palette]  = green_bamboo
 settings[theme_bg]  = dark_linen
 settings[bamboo_tertiarymenu]  = 0
+settings[bamboo_imagecaptions]  = 1
+settings[bamboo_tablehover]  = 0
 
-; Information added by Drupal.org packaging script on 2013-12-27
-version = "7.x-1.6"
+; Information added by Drupal.org packaging script on 2014-08-31
+version = "7.x-1.9"
 core = "7.x"
 project = "bamboo"
-datestamp = "1388110105"
+datestamp = "1409498032"
 
